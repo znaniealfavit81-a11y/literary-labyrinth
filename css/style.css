@@ -1,0 +1,357 @@
+/* Общие стили */
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #e63946;
+    --accent-color: #2a9d8f;
+    --light-color: #f1faee;
+    --dark-color: #1d3557;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Заголовок */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+h4 {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.btn.primary {
+    background-color: var(--primary-color);
+}
+
+.btn.secondary {
+    background-color: var(--accent-color);
+}
+
+.btn.danger {
+    background-color: var(--secondary-color);
+}
+
+.back-btn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--dark-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Игровые комнаты */
+.game-container {
+    min-height: 100vh;
+}
+
+.game-room {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.room-header {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+.room-description {
+    padding: 20px;
+}
+
+/* Прогресс */
+.progress {
+    margin: 20px 0;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--accent-color);
+}
+
+/* Задания */
+.task {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+    margin: 10px 0;
+}
+
+.quiz-options label {
+    display: block;
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quiz-options input {
+    margin-right: 10px;
+}
+
+.check-btn {
+    background-color: var(--accent-color);
+    margin: 10px 0;
+}
+
+.result {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.success {
+    color: var(--success-color);
+}
+
+.error {
+    color: var(--danger-color);
+}
+
+/* Пазлы */
+.puzzle-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.puzzle-item {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    cursor: move;
+    flex: 1 0 calc(25% - 10px);
+    text-align: center;
+}
+
+.puzzle-target {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 100px;
+    border: 2px dashed #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.puzzle-slot {
+    height: 40px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Правда/Ложь */
+.true-false {
+    margin: 10px 0;
+}
+
+.tf-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.tf-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tf-btn {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.true-btn {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.false-btn {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+/* Сертификат */
+.certificate-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.certificate {
+    border: 15px solid var(--primary-color);
+    padding: 40px;
+    max-width: 600px;
+    background-color: var(--light-color);
+    position: relative;
+}
+
+.cert-text {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.student-name {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.student-name input {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid var(--dark-color);
+    background: transparent;
+    width: 80%;
+    padding: 5px;
+}
+
+.student-name input:focus {
+    outline: none;
+}
+
+.results {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.2rem;
+}
+
+.cert-footer {
+    margin-top: 50px;
+    text-align: right;
+}
+
+.signature {
+    height: 50px;
+    vertical-align: middle;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
+    }
+    
+    .puzzle-item {
+        flex: 1 0 calc(50% - 10px);
+    }
+    
+    .certificate {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .puzzle-item {
+        flex: 1 0 100%;
+    }
+    
+    .tf-buttons {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пролог - Литературный лабиринт</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container game-container">
+        <header>
+            <a href="index.html" class="back-btn">&larr; Назад</a>
+            <h1>Литературный лабиринт</h1>
+        </header>
+        
+        <main class="game-room">
+            <div class="room-description">
+                <h2>Пролог: Тайна старой библиотеки</h2>
+                <div class="story">
+                    <p>Ты идешь домой после школы и замечаешь странную библиотеку, которой раньше не было. Любопытство берет верх, и ты заходишь внутрь...</p>
+                    <div class="character">
+                        <img src="img/biblio.png" alt="Библио" class="character-img">
+                        <div class="character-dialog">
+                            <p><strong>Библио:</strong> Привет, юный книголюб! Меня зовут Библио, и я - хранитель этой волшебной библиотеки. Чтобы вернуться домой, тебе нужно пройти через Литературный лабиринт и доказать, что ты настоящий ценитель книг! Готов к приключению?</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="choices">
+                    <button class="choice-btn" onclick="startQuest()">Да, готов!</button>
+                    <button class="choice-btn" onclick="showMoreInfo()">Расскажи подробнее</button>
+                </div>
+                
+                <div id="more-info" class="hidden">
+                    <h3>Как пройти квест:</h3>
+                    <ol>
+                        <li>Пройдите через 10 комнат</li>
+                        <li>В каждой комнате выполните задания</li>
+                        <li>Соберите все ключи для финального сертификата</li>
+                        <li>Получите оценку за прохождение</li>
+                    </ol>
+                    <button class="choice-btn" onclick="startQuest()">Начать приключение</button>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Литературный лабиринт &copy; 2023</p>
+        </footer>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/rooms.js"></script>
+</body>
+</html>

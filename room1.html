@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комната 1: Русские народные сказки</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container game-container">
+        <header>
+            <a href="prolog.html" class="back-btn">&larr; Назад</a>
+            <h1>Литературный лабиринт</h1>
+            <div class="progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 10%;"></div>
+                </div>
+                <p>Прогресс: 1 из 10 комнат</p>
+            </div>
+        </header>
+        
+        <main class="game-room">
+            <div class="room-header" style="background-image: url('img/room1.jpg');">
+                <h2>Комната 1: Русские народные сказки</h2>
+            </div>
+            
+            <div class="room-description">
+                <p>Перед тобой раскинулся удивительный мир русских народных сказок. Здесь ты встретишь царевну-лягушку, Ивана-крестьянского сына, журавля и цаплю. Чтобы пройти дальше, выполни задания!</p>
+                
+                <div class="task">
+                    <h3>Задание 1: Собери сказку</h3>
+                    <p>Перетащи картинки в правильном порядке, восстановив сюжет "Царевны-лягушки":</p>
+                    
+                    <div class="puzzle-container">
+                        <div class="puzzle-item" draggable="true">Иван находит лягушку</div>
+                        <div class="puzzle-item" draggable="true">Лягушка превращается в Василису</div>
+                        <div class="puzzle-item" draggable="true">Кощей похищает Василису</div>
+                        <div class="puzzle-item" draggable="true">Иван спасает Василису</div>
+                    </div>
+                    
+                    <div class="puzzle-target">
+                        <div class="puzzle-slot"></div>
+                        <div class="puzzle-slot"></div>
+                        <div class="puzzle-slot"></div>
+                        <div class="puzzle-slot"></div>
+                    </div>
+                    
+                    <button class="check-btn" onclick="checkPuzzle()">Проверить</button>
+                    <p id="puzzle-result" class="result"></p>
+                </div>
+                
+                <div class="task">
+                    <h3>Задание 2: Угадай героя</h3>
+                    <p>Кто из героев русских сказок победил Чудо-юдо?</p>
+                    
+                    <div class="quiz-options">
+                        <label>
+                            <input type="radio" name="hero" value="ivan-tsar"> Иван-царевич
+                        </label>
+                        <label>
+                            <input type="radio" name="hero" value="ivan-peasant" checked> Иван-крестьянский сын
+                        </label>
+                        <label>
+                            <input type="radio" name="hero" value="vasilisa"> Василиса Премудрая
+                        </label>
+                        <label>
+                            <input type="radio" name="hero" value="baba-yaga"> Баба Яга
+                        </label>
+                    </div>
+                    
+                    <button class="check-btn" onclick="checkQuiz()">Проверить</button>
+                    <p id="quiz-result" class="result"></p>
+                </div>
+                
+                <div class="task">
+                    <h3>Задание 3: Правда или вымысел</h3>
+                    <p>Определи, верны ли утверждения:</p>
+                    
+                    <div class="true-false">
+                        <div class="tf-item">
+                            <p>В сказке "Журавль и цапля" журавль победил цаплю в сражении</p>
+                            <div class="tf-buttons">
+                                <button class="tf-btn true-btn" onclick="checkTF(1, false)">Правда</button>
+                                <button class="tf-btn false-btn" onclick="checkTF(1, true)">Вымысел</button>
+                            </div>
+                            <p id="tf-result-1" class="result"></p>
+                        </div>
+                        
+                        <div class="tf-item">
+                            <p>Солдат в сказке "Солдатская шинель" был добрым и щедрым</p>
+                            <div class="tf-buttons">
+                                <button class="tf-btn true-btn" onclick="checkTF(2, true)">Правда</button>
+                                <button class="tf-btn false-btn" onclick="checkTF(2, false)">Вымысел</button>
+                            </div>
+                            <p id="tf-result-2" class="result"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="room-complete" class="hidden">
+                    <h3>Поздравляю!</h3>
+                    <p>Ты успешно прошел первую комнату. Получи свой первый ключ и отправляйся дальше!</p>
+                    <img src="img/key1.png" alt="Ключ от комнаты 1" class="key">
+                    <a href="room2.html" class="btn primary">Перейти в комнату 2</a>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Литературный лабиринт &copy; 2023</p>
+        </footer>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/rooms.js"></script>
+</body>
+</html>

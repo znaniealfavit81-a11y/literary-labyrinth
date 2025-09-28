@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Финал - Литературный лабиринт</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container game-container">
+        <header>
+            <a href="room10.html" class="back-btn">&larr; Назад</a>
+            <h1>Литературный лабиринт</h1>
+        </header>
+        
+        <main class="game-room">
+            <div class="room-header" style="background-image: url('img/final.jpg');">
+                <h2>Поздравление! Ты прошел весь квест!</h2>
+            </div>
+            
+            <div class="room-description">
+                <div class="certificate-container">
+                    <div class="certificate">
+                        <h2>Сертификат</h2>
+                        <p class="cert-text">Выдано</p>
+                        <div class="student-name">
+                            <input type="text" id="student-name" placeholder="Введите ваше имя">
+                        </div>
+                        <p class="cert-text">в знак успешного прохождения квеста "Литературный лабиринт"</p>
+                        
+                        <div class="results">
+                            <p>Правильных ответов: <span id="correct-count">9</span> из <span id="total-count">10</span></p>
+                            <p>Оценка: <span id="grade">5</span></p>
+                        </div>
+                        
+                        <div class="cert-footer">
+                            <p>Дата: <span id="cert-date"></span></p>
+                            <p>Подпись Библио: <img src="img/signature.png" alt="Подпись" class="signature"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cert-actions">
+                    <button class="btn primary" onclick="generateCertificate()">Создать сертификат</button>
+                    <button class="btn secondary" onclick="printCertificate()">Распечатать</button>
+                    <a href="index.html" class="btn" id="play-again">Пройти квест заново</a>
+                </div>
+                
+                <div class="share-options hidden" id="share-options">
+                    <h3>Поделиться результатами:</h3>
+                    <button class="btn social facebook">Facebook</button>
+                    <button class="btn social twitter">Twitter</button>
+                    <button class="btn social vk">ВКонтакте</button>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Литературный лабиринт &copy; 2023</p>
+        </footer>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/rooms.js"></script>
+    <script>
+        // Установка текущей даты
+        const now = new Date();
+        document.getElementById('cert-date').textContent = now.toLocaleDateString('ru-RU');
+        
+        // Пример результатов (в реальном квесте это будет динамически)
+        document.getElementById('correct-count').textContent = '38';
+        document.getElementById('total-count').textContent = '40';
+        document.getElementById('grade').textContent = '5';
+    </script>
+</body>
+</html>
